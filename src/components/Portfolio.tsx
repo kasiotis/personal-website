@@ -8,9 +8,9 @@ const Portfolio = () => {
   const projects = [
     {
       title: 'Towards Energy-Aware Management of Shared Printers',
-      description: 'Research published in Practical Applications of Stochastic Modelling conference. Developed optimization strategies for printer management, achieving 4.8% reduction in operating time and 35% reduction in state transitions. The work addresses energy efficiency in institutional IT infrastructure.',
+      description: 'Research published in Practical Applications of Stochastic Modelling conference. Proposed and evaluated optimization strategies for printer energy policy management through forcasted demand, achieving 4.8% reduction in operating time and 35% reduction in state transitions. The work addresses energy efficiency in institutional IT infrastructure.',
       link: 'https://link.springer.com/chapter/10.1007/978-3-031-44053-3_6',
-      tech: ['R', 'Stochastic Modelling', 'Data Analysis', 'Machine Learning', 'Time Series', 'Empirical Research', 'R&D', 'Simulation', 'Energy Management', 'Sustainability'],
+      tech: ['Stochastic Modelling', 'Data Analysis', 'Machine Learning', 'Time Series', 'Empirical Research', 'R&D', 'Simulation', 'Energy Management', 'Sustainability'],
       isPublication: true
     },
     {
@@ -53,7 +53,7 @@ const Portfolio = () => {
       title: 'Data Management & EDA',
       description: 'Comprehensive data management and exploratory data analysis project showcasing data cleaning, preprocessing, statistical analysis, and visualization techniques using real-world datasets.',
       link: 'https://github.com/kasiotis/Data-Management-and-Exploratory-Data-Analysis',
-      tech: ['R', 'Exploratory Data Analysis', 'tidyverse', 'Dplyr', 'Visualization']
+      tech: ['R', 'Visualization', 'Exploratory Data Analysis', 'Business Analysis', 'tidyverse', 'dplyr', 'tidytext', 'lubridate', 'stringi/stringr', 'ggplot2', 'reshape2']
     }
   ];
 
