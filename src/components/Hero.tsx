@@ -33,7 +33,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Typography variant="h2" component="h1" sx={{ fontWeight: 700 }}>
-            Andreas Kasiotis
+            Antreas Kasiotis
           </Typography>
         </motion.div>
         
@@ -43,7 +43,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Typography variant="h4" color="text.secondary" sx={{ mb: 3 }}>
-            Lead Data Engineering Consultant
+            Data Science and Engineering Consultant
           </Typography>
         </motion.div>
         
