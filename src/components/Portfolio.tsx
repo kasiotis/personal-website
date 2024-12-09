@@ -14,16 +14,16 @@ const Portfolio = () => {
       isPublication: true
     },
     {
-      title: 'LLM document comparison app',
-      description: 'An AI application using LLM to compare CVs with job postings to find the best matching profiles. This innovative tool streamlines the recruitment process by analyzing candidate resumes against job requirements.',
-      link: 'https://github.com/kasiotis/resume-to-job-checker',
-      tech: ['Python', 'LLM', 'AI', 'Web Application', 'Streamlit', 'Prompt Engineering'],
-    },
-    {
       title: 'Skin Cancer dermoscopic image Classification',
       description: 'Implementation of three different image classifiers (CNN, LSTM, SVM) for skin cancer detection using the HAM10000 dataset. Comparative analysis of classifier performance with grayscale and RGB images. The project demonstrates practical application of image classification in computer vision.',
       link: 'https://github.com/kasiotis/Skin-Cancer-MNIST-HAM10000',
       tech: ['Python', 'CNN', 'LSTM', 'SVM', 'Empirical Research', 'Image Classification', 'Computer Vision', 'Deep Learning']
+    },
+    {
+      title: 'LLM-Powered CV and Job Matching System',
+      description: 'An AI application using an LLM to compare CVs with job descriptions in order to find the best matching profiles. This innovative Proof of Concept (PoC) demonstrates the potential of LLMs in the field of job matching. The PoC streamlines the recruitment process by analyzing candidate resumes against job requirements, using the heuristics of LLM models.',
+      link: 'https://github.com/kasiotis/resume-to-job-checker',
+      tech: ['Python', 'LLM', 'AI', 'Web Application', 'Streamlit', 'Prompt Engineering'],
     },
     {
       title: 'Bird Species Classifier',

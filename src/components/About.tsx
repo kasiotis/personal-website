@@ -38,22 +38,22 @@ const About = () => {
     languages: {
       icon: <DataObjectIcon fontSize="large" />,
       title: "Programming Languages",
-      items: ['Python', 'R', 'SQL', 'TypeScript/JavaScript', 'Java']
+      items: ['Python', 'R', 'Java', 'C', 'SQL', 'TypeScript/JavaScript', 'Dart/Flutter']
     },
     libraries: {
       icon: <IntegrationInstructionsIcon fontSize="large" />,
       title: "Libraries & Frameworks",
-      items: ['NumPy', 'Pandas', 'Scikit-learn', 'TensorFlow', 'PyTorch', 'Tidyverse', 'ggplot2', 'React', 'Material-UI']
+      items: ['NumPy', 'Pandas', 'Scikit-learn', 'TensorFlow', 'PyTorch', 'Tidyverse', 'Dplyr', 'ggplot2', 'knitr', 'React']
     },
     tools: {
       icon: <BuildOutlinedIcon fontSize="large" />,
       title: "Tools & Platforms",
-      items: ['PowerBI', 'Tableau', 'Git', 'Docker', 'AWS', 'Azure']
+      items: ['PowerBI', 'Git', 'Jira', 'Docker', 'AWS', 'Azure']
     },
     etlTools: {
       icon: <StorageOutlinedIcon fontSize="large" />,
       title: "ETL & Data Integration",
-      items: ['Pentaho Data Integration', 'Apache Hop', 'Apache Spark', 'Apache Airflow']
+      items: ['Pentaho Data Integration', 'Azure Data Factory', 'Apache Hop', 'Apache Spark', 'Apache Airflow']
     }
   };
 
