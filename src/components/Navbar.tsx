@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, IconButton, Box, useTheme, useMediaQuery, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import CodeIcon from '@mui/icons-material/Code';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -30,21 +31,16 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="fixed" color="transparent" elevation={0} sx={{ backdropFilter: 'blur(8px)' }}>
-        <Toolbar>
-          <Typography 
-            variant="h6" 
-            component={Link} 
-            to="/"
-            sx={{ 
-              flexGrow: 1, 
-              fontWeight: 600,
-              textDecoration: 'none',
-              color: 'inherit'
-            }}
-          >
-            AK
-          </Typography>
+      <AppBar 
+        position="fixed" 
+        elevation={0} 
+        sx={{ 
+          background: 'background.paper',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+        }}
+      >
+        <Toolbar sx={{ justifyContent: 'center' }}>
           {isMobile ? (
             <IconButton
               color="inherit"
@@ -55,7 +51,7 @@ const Navbar = () => {
               <MenuIcon />
             </IconButton>
           ) : (
-            <Box sx={{ display: 'flex', gap: 4 }}>
+            <Box sx={{ display: 'flex', gap: 6 }}>
               {menuItems.map((item) => (
                 <Typography
                   key={item}
@@ -64,11 +60,25 @@ const Navbar = () => {
                   sx={{
                     color: 'inherit',
                     textDecoration: 'none',
+                    fontSize: '1.2rem',
+                    fontFamily: 'monospace',
+                    position: 'relative',
                     '&:hover': {
                       color: 'primary.main',
                     },
+                    '&:hover:after': {
+                      content: '""',
+                      position: 'absolute',
+                      left: 0,
+                      bottom: -2,
+                      width: '100%',
+                      height: 2,
+                      backgroundColor: 'primary.main',
+                      animation: 'underline 0.3s ease-in-out forwards'
+                    },
                   }}
                 >
+                  <CodeIcon sx={{ mr: 1, verticalAlign: 'middle' }} />
                   {item}
                 </Typography>
               ))}
@@ -87,6 +97,14 @@ const Navbar = () => {
       >
         {drawer}
       </Drawer>
+      <style>
+        {`
+          @keyframes underline {
+            from { width: 0; }
+            to { width: 100%; }
+          }
+        `}
+      </style>
     </>
   );
 };
