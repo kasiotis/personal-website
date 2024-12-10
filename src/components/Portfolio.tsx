@@ -72,11 +72,11 @@ const Portfolio = () => {
 
         <Box 
           sx={{
-            columnCount: { xs: 1, sm: 2 },
-            columnGap: 4,
+            columnCount: {xs:1, sm: 1, md: 2, lg: 2 , xl: 3 },
+            columnGap: 3,
             '& > *': {
               breakInside: 'avoid',
-              marginBottom: 4
+              marginBottom: 3
             }
           }}
         >
