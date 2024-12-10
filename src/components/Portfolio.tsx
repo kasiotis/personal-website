@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Box, Grid, Paper, Button } from '@mui/material';
+import { Container, Typography, Box, Paper, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
@@ -70,9 +70,18 @@ const Portfolio = () => {
           </Typography>
         </motion.div>
 
-        <Grid container spacing={4}>
+        <Box 
+          sx={{
+            columnCount: { xs: 1, sm: 2 },
+            columnGap: 4,
+            '& > *': {
+              breakInside: 'avoid',
+              marginBottom: 4
+            }
+          }}
+        >
           {projects.map((project, index) => (
-            <Grid item xs={12} md={6} key={project.title}>
+            <Box key={project.title}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -82,7 +91,6 @@ const Portfolio = () => {
                   elevation={0}
                   sx={{
                     p: 4,
-                    height: '100%',
                     backgroundColor: 'background.paper'
                   }}
                 >
@@ -127,9 +135,9 @@ const Portfolio = () => {
                   </Box>
                 </Paper>
               </motion.div>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Box>
     </Container>
   );
