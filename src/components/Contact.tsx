@@ -72,7 +72,7 @@ const Contact = () => {
       title: 'GitHub',
       content: 'Check out my projects',
       color: '#171515',
-      action: () => window.open('https://github.com/yourusername', '_blank')
+      action: () => window.open('https://github.com/kasiotis', '_blank')
     }
   ];
 
