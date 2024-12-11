@@ -53,7 +53,7 @@ const About = () => {
     tools: {
       icon: <BuildOutlinedIcon fontSize="large" />,
       title: "Tools & Platforms",
-      items: ['PowerBI', 'Neo4j', 'Git', 'Jira', 'AWS', 'Azure', 'Databricks']
+      items: ['PowerBI', 'Neo4j', 'Jupyter', 'Git', 'Jira', 'AWS', 'Azure', 'Databricks']
     },
     etlTools: {
       icon: <StorageOutlinedIcon fontSize="large" />,

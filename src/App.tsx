@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import BlogPost from './components/BlogPost';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           {/* Add more routes as we create other components */}
         </Routes>
       </Router>
