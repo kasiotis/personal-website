@@ -20,12 +20,12 @@ const About = () => {
     {
       icon: <WorkIcon fontSize="large" />,
       title: "Professional Journey",
-      content: "As a Lead Data Engineering Consultant, I specialize in transforming complex data challenges into efficient, scalable solutions. My journey in technology is driven by a passion for innovation and a commitment to sustainable computing practices."
+      content: "As a Data Engineering Consultant, I specialize in transforming complex data challenges into efficient, scalable solutions. My experience at Crownpeak (formerly Attraqt) has been invaluable in refining my skills in ETL development and domain expertise in the E-commerce industry.   My journey in technology is driven by a passion for innovation and a commitment to delivering exceptional results."
     },
     {
       icon: <SchoolOutlinedIcon fontSize="large" />,
       title: "Academic Background",
-      content: "With an MSc in Data Science and BSc in Computer Science from Newcastle University, I bring a unique blend of theoretical knowledge and practical expertise. My work spans from computer vision applications in healthcare to energy optimization in IT infrastructure. My research work in energy-aware management systems, published in the Practical Applications of Stochastic Modelling conference, demonstrates my commitment to sustainable IT practices. Whilst my experience at Crownpeak (formerly Attraqt) has been invaluable in refining my skills in ETL development and domain expertise in the E-commerce industry."
+      content: "With an MSc in Data Science and BSc in Computer Science from Newcastle University, I bring a unique blend of theoretical knowledge and practical expertise. My work spans from computer vision applications in healthcare to energy optimization in IT infrastructure. My research work in energy-aware management systems, published in the Practical Applications of Stochastic Modelling conference, demonstrates my commitment to sustainable IT practices."
     },
     {
       icon: <LightbulbOutlinedIcon fontSize="large" />,
@@ -38,22 +38,27 @@ const About = () => {
     languages: {
       icon: <DataObjectIcon fontSize="large" />,
       title: "Programming Languages",
-      items: ['Python', 'R', 'Java', 'C', 'SQL', 'TypeScript/JavaScript', 'Dart/Flutter']
+      items: ['R', 'Python', 'SQL', 'Java', 'C', 'TypeScript', 'JavaScript', 'Dart', 'Bash', 'regex', 'VDM-SL']
     },
     libraries: {
       icon: <IntegrationInstructionsIcon fontSize="large" />,
-      title: "Libraries & Frameworks",
-      items: ['NumPy', 'Pandas', 'Scikit-learn', 'TensorFlow', 'PyTorch', 'Tidyverse', 'Dplyr', 'ggplot2', 'knitr', 'React']
+      title: "Libraries",
+      items: ['NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'Dplyr','tidyverse', 'caret', 'e1071', 'Seaborn', 'ggplot2', 'knitr']
+    },
+    frameworks: {
+      icon: <IntegrationInstructionsIcon fontSize="large" />,
+      title: "Frameworks",
+      items: ['React', 'Flutter', 'Flask', 'Keras', 'PyTorch', 'TensorFlow', 'Apache Spark', 'CRISP-DM', 'Neo4j']
     },
     tools: {
       icon: <BuildOutlinedIcon fontSize="large" />,
       title: "Tools & Platforms",
-      items: ['PowerBI', 'Git', 'Jira', 'Docker', 'AWS', 'Azure']
+      items: ['PowerBI', 'Neo4j', 'Git', 'Jira', 'AWS', 'Azure', 'Databricks']
     },
     etlTools: {
       icon: <StorageOutlinedIcon fontSize="large" />,
       title: "ETL & Data Integration",
-      items: ['Pentaho Data Integration', 'Azure Data Factory', 'Apache Hop', 'Apache Spark', 'Apache Airflow']
+      items: ['Pentaho Data Integration', 'Azure Data Factory', 'Apache Hop']
     }
   };
 
@@ -145,6 +150,48 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           <Typography variant="h4" sx={{ mb: 4 }}>
+            Skills & Expertise
+          </Typography>
+        </motion.div>
+
+        <Grid container spacing={4} sx={{ mb: 8 }}>
+          {skills.map((skill, index) => (
+            <Grid item xs={12} md={4} key={skill.title}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.9 + index * 0.2 }}
+              >
+                <Paper 
+                  elevation={0}
+                  sx={{
+                    p: 4,
+                    backgroundColor: 'background.paper',
+                    borderRadius: 2,
+                    height: '100%'
+                  }}
+                >
+                  <Box sx={{ color: 'primary.main', mb: 2 }}>
+                    {skill.icon}
+                  </Box>
+                  <Typography variant="h6" sx={{ mb: 2 }}>
+                    {skill.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                    {skill.description}
+                  </Typography>
+                </Paper>
+              </motion.div>
+            </Grid>
+          ))}
+        </Grid>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.6 }}
+        >
+          <Typography variant="h4" sx={{ mb: 4 }}>
             Tech Stack
           </Typography>
         </motion.div>
@@ -155,7 +202,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.9 + index * 0.2 }}
+                transition={{ duration: 0.5, delay: 1.8 + index * 0.2 }}
               >
                 <Paper
                   elevation={0}
@@ -190,48 +237,6 @@ const About = () => {
                       </Typography>
                     ))}
                   </Box>
-                </Paper>
-              </motion.div>
-            </Grid>
-          ))}
-        </Grid>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.6 }}
-        >
-          <Typography variant="h4" sx={{ mb: 4 }}>
-            Skills & Expertise
-          </Typography>
-        </motion.div>
-
-        <Grid container spacing={4}>
-          {skills.map((skill, index) => (
-            <Grid item xs={12} md={4} key={skill.title}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.8 + index * 0.2 }}
-              >
-                <Paper 
-                  elevation={0}
-                  sx={{
-                    p: 3,
-                    height: '100%',
-                    backgroundColor: 'background.paper',
-                    borderRadius: 2
-                  }}
-                >
-                  <Box sx={{ color: 'primary.main', mb: 2 }}>
-                    {skill.icon}
-                  </Box>
-                  <Typography variant="h6" sx={{ mb: 2 }}>
-                    {skill.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>
-                    {skill.description}
-                  </Typography>
                 </Paper>
               </motion.div>
             </Grid>
