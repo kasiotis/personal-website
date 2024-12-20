@@ -99,49 +99,71 @@ const BlogPost = () => {
               Project Overview
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              {project.description}
+              {project.content?.overview || project.description}
             </Typography>
 
+            {project.content?.methodology && (
+              <>
+                <Typography variant="h5" sx={{ mb: 3 }}>
+                  Methodology
+                </Typography>
+                <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
+                  {project.content.methodology}
+                </Typography>
+              </>
+            )}
+
             <Typography variant="h5" sx={{ mb: 3 }}>
-              Technical Details
+              Technical Stack
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
               This project utilizes {project.tech.join(', ')} to deliver a robust solution.
               {project.isPublication && ' The research has been published and peer-reviewed, demonstrating its academic significance.'}
             </Typography>
 
-            <Typography variant="h5" sx={{ mb: 3 }}>
-              Key Features
-            </Typography>
-            <Box component="ul" sx={{ pl: 3, mb: 4 }}>
-              <Typography component="li" sx={{ mb: 1 }}>
-                Implemented using industry-standard technologies and best practices
-              </Typography>
-              <Typography component="li" sx={{ mb: 1 }}>
-                Thoroughly documented and maintained codebase
-              </Typography>
-              <Typography component="li" sx={{ mb: 1 }}>
-                Scalable and maintainable architecture
-              </Typography>
-            </Box>
+            {project.content?.results && (
+              <>
+                <Typography variant="h5" sx={{ mb: 3 }}>
+                  Results
+                </Typography>
+                <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
+                  {project.content.results}
+                </Typography>
+              </>
+            )}
 
-            <Typography variant="h5" sx={{ mb: 3 }}>
-              Future Improvements
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              While the current implementation successfully meets its objectives, there are several potential areas for future enhancement:
-            </Typography>
-            <Box component="ul" sx={{ pl: 3 }}>
-              <Typography component="li" sx={{ mb: 1 }}>
-                Enhanced feature set and capabilities
-              </Typography>
-              <Typography component="li" sx={{ mb: 1 }}>
-                Improved performance optimizations
-              </Typography>
-              <Typography component="li" sx={{ mb: 1 }}>
-                Additional documentation and examples
-              </Typography>
-            </Box>
+            {project.content?.conclusion && (
+              <>
+                <Typography variant="h5" sx={{ mb: 3 }}>
+                  Conclusion
+                </Typography>
+                <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
+                  {project.content.conclusion}
+                </Typography>
+              </>
+            )}
+
+            {!project.content?.conclusion && (
+              <>
+                <Typography variant="h5" sx={{ mb: 3 }}>
+                  Future Development
+                </Typography>
+                <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
+                  This project is actively maintained and open to contributions. Future improvements may include:
+                </Typography>
+                <Box component="ul" sx={{ pl: 3 }}>
+                  <Typography component="li" sx={{ mb: 1 }}>
+                    Additional features and capabilities
+                  </Typography>
+                  <Typography component="li" sx={{ mb: 1 }}>
+                    Performance optimizations
+                  </Typography>
+                  <Typography component="li" sx={{ mb: 1 }}>
+                    Extended documentation
+                  </Typography>
+                </Box>
+              </>
+            )}
           </Paper>
         </motion.div>
       </Box>
