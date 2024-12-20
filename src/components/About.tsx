@@ -20,17 +20,24 @@ const About = () => {
     {
       icon: <WorkIcon fontSize="large" />,
       title: "Professional Journey",
-      content: "As a Data Engineering Consultant, I specialize in transforming complex data challenges into efficient, scalable solutions. My experience at Crownpeak (formerly Attraqt) has been invaluable in refining my skills in ETL development and domain expertise in the E-commerce industry. In my role, I've successfully collaborated with cross-functional teams in delivering multiple projects, focusing on data enrichments and external integrations for client ETLs. I've enhanced product recommendations and marketing use cases through key data-driven analytics integration, while maintaining high standards in code quality through code reviews and CI/CD pipelines. This hands-on experience in team leadership and technical implementation demonstrates my ability to deliver complex solutions that drive business value."
+      content: "As a Data Engineering Consultant, I specialize in transforming complex data challenges into efficient, scalable solutions. My experience at Crownpeak (formerly Attraqt) has been invaluable in refining my skills in ETL development and domain expertise in the E-commerce industry. In my role, I've successfully led my own team and collaborated with cross-functional teams in delivering multiple projects. Focusing on data enrichments, product recommendations, data-driven merchendising campaigns, and external integrations for client ETLs, whilst always maintaining high standards in code quality through code reviews and CI/CD pipelines. This hands-on experience in team leadership and technical implementation demonstrates my ability to deliver complex solutions that drive business value."
     },
     {
       icon: <SchoolOutlinedIcon fontSize="large" />,
       title: "Academic Background",
-      content: "Holding a Master's in Data Science (Distinction) and a BSc in Computer Science (1st Class) from Newcastle University, I've developed a comprehensive skill set in data science and software engineering. My expertise spans machine learning, big data analytics, and software development. During my MSc, I specialized in advanced machine learning techniques, working with classification models, deep learning architectures, and big data technologies using R and Python. My research culminated in a published paper on energy-aware management systems, where I applied stochastic modeling to optimize IT infrastructure efficiency. My computer science foundation includes strong programming principles, algorithm design, and system architecture, complemented by practical experience in database systems and security protocols."
+      content: "Holding a Master's in Data Science (Distinction) and a BSc in Computer Science (1st Class) \
+      from Newcastle University, I've developed a comprehensive skill set in data science and software engineering.\
+       My expertise spans machine learning, big data analytics, and software development. During my MSc, \
+       I specialized in advanced machine learning techniques, working with classification models, deep learning\
+        architectures, and big data technologies using R and Python. My research culminated in a published paper\
+         on energy-aware management systems, where I applied stochastic modeling to optimize IT infrastructure\
+          efficiency. My computer science foundation includes strong programming principles, algorithm design,\
+           and system architecture, complemented by practical experience in database systems and security protocols."
     },
     {
       icon: <LightbulbOutlinedIcon fontSize="large" />,
       title: "Areas of Interest",
-      content: "My passion lies in the intersection of machine learning, data engineering, and sustainable computing. I'm particularly focused on developing scalable data solutions that leverage advanced ML techniques, from computer vision applications in healthcare to natural language processing in recruitment. I'm deeply interested in optimizing system performance and energy efficiency in IT infrastructure, as demonstrated through my research in stochastic modeling. I'm constantly exploring new ways to apply data-driven approaches to solve complex business challenges while maintaining a strong focus on sustainability and efficiency."
+      content: "My passion lies in the intersection of machine learning, data engineering, and sustainable computing. I'm particularly focused on developing scalable data solutions that leverage advanced ML techniques for real-world applications. I'm deeply interested in optimizing system performance and energy efficiency in IT infrastructure, as demonstrated through my research in stochastic modeling. I'm constantly exploring new ways to apply data-driven approaches to solve complex business challenges while maintaining a strong focus on sustainability and efficiency."
     }
   ];
 
