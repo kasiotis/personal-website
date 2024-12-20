@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container, Button } from '@mui/material';
+import { Box, Typography, Container, Button, Avatar } from '@mui/material';
 import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -17,6 +17,25 @@ const Hero = () => {
           gap: 1.5,
         }}
       >
+        <motion.div
+          initial={{ opacity: 0, y: 20, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Avatar
+            src="/avatar.ico"
+            alt="Antreas Kasiotis"
+            sx={{
+              width: 150,
+              height: 150,
+              mb: 3,
+              border: '3px solid',
+              borderColor: 'primary.main',
+              boxShadow: 3,
+            }}
+          />
+        </motion.div>
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
