@@ -13,8 +13,8 @@ const Hero = () => {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'flex-start',
-          gap: 3,
+          alignItems: 'center',
+          gap: 1.5,
         }}
       >
         <motion.div
@@ -43,7 +43,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Typography variant="h4" color="text.secondary" sx={{ mb: 3 }}>
-            Data Science and Engineering Consultant
+            Data Scientist - Data Engineer
           </Typography>
         </motion.div>
         
@@ -52,7 +52,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Typography variant="body1" color="text.secondary" sx={{ maxWidth: '600px', mb: 4 }}>
+          <Typography variant="body1" color="text.secondary" sx={{ maxWidth: '600px', mb: 4, textAlign: 'center' }}>
             Experienced in Data Engineering, Machine Learning, and Data Analysis. 
             Passionate about creating impactful solutions and driving innovation in data-driven technologies.
           </Typography>
