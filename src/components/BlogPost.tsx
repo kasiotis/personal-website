@@ -113,14 +113,6 @@ const BlogPost = () => {
               </>
             )}
 
-            <Typography variant="h5" sx={{ mb: 3 }}>
-              Technical Stack
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              This project utilizes {project.tech.join(', ')} to deliver a robust solution.
-              {project.isPublication && ' The research has been published and peer-reviewed, demonstrating its academic significance.'}
-            </Typography>
-
             {project.content?.results && (
               <>
                 <Typography variant="h5" sx={{ mb: 3 }}>
