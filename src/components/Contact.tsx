@@ -77,15 +77,18 @@ const Contact = () => {
   ];
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 4, md: 8 } }}>
       <Box
         sx={{
-          minHeight: '100vh',
-          py: 12,
+          minHeight: '80vh',
+          pt: { xs: 15, sm: 18 },
+          pb: { xs: 8, sm: 10 },
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 4
+          gap: 4,
+          mx: 'auto',
+          maxWidth: 'md'
         }}
       >
         <motion.div
@@ -128,9 +131,13 @@ const Contact = () => {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, minmax(0, 1fr))',
             gap: 3,
-            width: '100%'
+            width: '100%',
+            '& > *': {
+              minWidth: 0,
+              width: '100%'
+            }
           }}
         >
           {contactMethods.map((method, index) => (
@@ -140,16 +147,19 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
+              style={{ width: '100%' }}
             >
               <Box
                 onClick={method.action}
                 sx={{
                   p: 3,
-                  height: '100%',
+                  height: { xs: '160px', sm: '100%' },
+                  width: '100%',
                   cursor: 'pointer',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
+                  justifyContent: 'center',
                   textAlign: 'center',
                   background: 'rgba(255, 255, 255, 0.05)',
                   backdropFilter: 'blur(10px)',
@@ -165,17 +175,23 @@ const Contact = () => {
                 <Box
                   sx={{
                     color: method.color,
-                    mb: 2,
+                    mb: 1.5,
                     transition: 'transform 0.3s ease',
                     '&:hover': { transform: 'scale(1.1)' }
                   }}
                 >
                   {method.icon}
                 </Box>
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" sx={{ mb: 1 }}>
                   {method.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{ 
+                  fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                  lineHeight: { xs: 1.4, sm: 1.5 },
+                  wordBreak: 'break-word',
+                  maxWidth: '100%',
+                  px: 1
+                }}>
                   {method.content}
                 </Typography>
               </Box>
