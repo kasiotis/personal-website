@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
+import { projects } from '../data/projects';
 
 // Import projects data
-import { projects } from './Portfolio';
 
 const BlogPost = () => {
   const { slug } = useParams();
