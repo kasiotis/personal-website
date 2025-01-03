@@ -23,7 +23,7 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
         >
           <Avatar
-            src="/avatar.ico"
+            src="avatar.ico"
             alt="Antreas Kasiotis"
             sx={{
               width: 150,
