@@ -3,7 +3,6 @@ import {
   Container,
   Typography,
   Box,
-  IconButton,
   useTheme,
   useMediaQuery,
 } from '@mui/material';
@@ -11,8 +10,6 @@ import { motion } from 'framer-motion';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import CloseIcon from '@mui/icons-material/Close';
-import SendIcon from '@mui/icons-material/Send';
 
 const Contact = () => {
   const theme = useTheme();
@@ -78,7 +75,7 @@ const Contact = () => {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Let's Create Something Together
+            Let's Have a Chat
           </Typography>
         </motion.div>
 
